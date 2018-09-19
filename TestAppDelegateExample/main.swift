@@ -1,5 +1,5 @@
 //
-//  Copyright © 2016 mokacoding. All rights reserved.
+//  Copyright © 2016-2018 mokacoding. All rights reserved.
 //
 
 import UIKit
@@ -9,4 +9,4 @@ private func delegateClassName() -> String? {
 }
 
 
-UIApplicationMain(CommandLine.argc, UnsafeMutableRawPointer(CommandLine.unsafeArgv).bindMemory(to: UnsafeMutablePointer<Int8>.self, capacity: Int(CommandLine.argc)), nil, delegateClassName())
+UIApplicationMain(CommandLine.argc, CommandLine.unsafeArgv, nil, delegateClassName())

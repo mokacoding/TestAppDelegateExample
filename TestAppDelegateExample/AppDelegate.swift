@@ -1,5 +1,5 @@
 //
-//  Copyright © 2016 mokacoding. All rights reserved.
+//  Copyright © 2016-2018 mokacoding. All rights reserved.
 //
 
 import UIKit
@@ -8,7 +8,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         return true
     }
 }
