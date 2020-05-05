@@ -4,4 +4,4 @@ You can read the blog post explaining the process [here on mokacoding.com](http:
 
 ---
 
-(c) 2016 Giovanni Lodi [@mokagio](https://twitter.com/mokagio) - mokacoding ☕️ [@mokacoding](https://twitter.com/mokacoding).
+(c) 2016 - 2020 Gio Lodi [@mokagio](https://twitter.com/mokagio) - [mokacoding ☕️](https://mokacoding.com)
