@@ -1,8 +1,17 @@
 on: push
 
 jobs:
-  macos-xcode:
-    runs-on: macos-latest
+  uikit-only-tests:
+    runs-on: macos-11.0
     steps:
-      - name: "Print current version of Xcode"
-        run: xcodebuild -version
+      - uses: actions/checkout@v2
+      - run: |
+          brew tap thii/xcbeautify https://github.com/thii/xcbeautify.git
+          brew install xcbeautify
+      - run: |
+          cd UIKit-Example
+          xcodebuild test \
+            -project TestAppDelegateExample.xcodeproj \
+            -scheme TestAppDelegateExample \
+            -destination 'platform=iOS Simulator,name=iPhone 12 Pro' -sdk iphonesimulator \
+            | xcbeautify
