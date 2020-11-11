@@ -1,0 +1,62 @@
+on: push
+env:
+  DEVELOPER_DIR: /Applications/Xcode_12.2.app/Contents/Developer
+
+jobs:
+  uikit-only-tests:
+    runs-on: macos-11.0
+    steps:
+      - uses: actions/checkout@v2
+      # I wanted to use xcbeautify to make the logs cleaner, but it fails to
+      # install (1) because macos-11, at the time of writing, has Xcode 11 as
+      # the default and the tool requires 12.1 (2)
+      #
+      # As you can see above, I set the DEVELOPER_DIR environment variable, but
+      # it doesn't seem to work for this step (3).
+      #
+      # References:
+      # 1. https://github.com/actions/virtual-environments/blob/a31ef3fcfe1eebb2fc8e557b76d85315d5651991/images/macos/macos-11.0-Readme.md
+      # 2. https://github.com/mokacoding/TestAppDelegateExample/runs/1383211558?check_suite_focus=true#step:3:18
+      # 3. https://github.com/mokacoding/TestAppDelegateExample/runs/1383279298?check_suite_focus=true#step:3:20
+      #
+      # - run: |
+      #     brew tap thii/xcbeautify https://github.com/thii/xcbeautify.git
+      #     brew install xcbeautify
+      - name: UIKit Example Tests
+        run: |
+          cd UIKit-Example
+          xcodebuild test \
+            -project TestAppDelegateExample.xcodeproj \
+            -scheme TestAppDelegateExample \
+            -destination 'platform=iOS Simulator,name=iPhone 12 Pro' -sdk iphonesimulator # | xcbeautify
+
+  swiftui-only-tests:
+    runs-on: macos-11.0
+    steps:
+      - uses: actions/checkout@v2
+      # - run: |
+      #     brew tap thii/xcbeautify https://github.com/thii/xcbeautify.git
+      #     brew install xcbeautify
+      - name: SwiftUI Example Tests
+        run: |
+          cd SwiftUI-Example
+          xcodebuild test \
+            -project TestAppExample.xcodeproj \
+            -scheme TestAppExample \
+            -destination 'platform=iOS Simulator,name=iPhone 12 Pro' -sdk iphonesimulator # | xcbeautify
+
+
+  swiftui-wit-uikit-only-tests:
+    runs-on: macos-11.0
+    steps:
+      - uses: actions/checkout@v2
+      # - run: |
+      #     brew tap thii/xcbeautify https://github.com/thii/xcbeautify.git
+      #     brew install xcbeautify
+      - name: Mixed SwiftUI and UIKit Example Tests
+        run: |
+          cd Mixed-SwiftUI-UIKit-Example
+          xcodebuild test \
+            -project MixedSwiftUIUIKitExample.xcodeproj \
+            -scheme MixedSwiftUIUIKitExample \
+            -destination 'platform=iOS Simulator,name=iPhone 12 Pro' -sdk iphonesimulator # | xcbeautify
