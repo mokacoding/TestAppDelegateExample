@@ -13,6 +13,7 @@
 		3F52E3DE255B7E5F00091058 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F52E3DD255B7E5F00091058 /* Preview Assets.xcassets */; };
 		3F52E3E9255B7E6000091058 /* TestAppExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E3E8255B7E6000091058 /* TestAppExampleTests.swift */; };
 		3F52E3F4255B7E6000091058 /* TestAppExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E3F3255B7E6000091058 /* TestAppExampleUITests.swift */; };
+		3F52E408255B7FC700091058 /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E407255B7FC700091058 /* AppLauncher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		3F52E3EF255B7E6000091058 /* TestAppExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAppExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F52E3F3255B7E6000091058 /* TestAppExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppExampleUITests.swift; sourceTree = "<group>"; };
 		3F52E3F5255B7E6000091058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F52E407255B7FC700091058 /* AppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLauncher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				3F52E3D6255B7E5E00091058 /* TestAppExampleApp.swift */,
+				3F52E407255B7FC700091058 /* AppLauncher.swift */,
 				3F52E3D8255B7E5E00091058 /* ContentView.swift */,
 				3F52E3DA255B7E5F00091058 /* Assets.xcassets */,
 				3F52E3DF255B7E5F00091058 /* Info.plist */,
@@ -261,6 +264,7 @@
 			files = (
 				3F52E3D9255B7E5E00091058 /* ContentView.swift in Sources */,
 				3F52E3D7255B7E5E00091058 /* TestAppExampleApp.swift in Sources */,
+				3F52E408255B7FC700091058 /* AppLauncher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
