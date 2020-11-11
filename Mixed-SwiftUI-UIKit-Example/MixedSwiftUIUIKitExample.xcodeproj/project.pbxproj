@@ -16,6 +16,7 @@
 		3F52E43E255B816800091058 /* MixedSwiftUIUIKitExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E43D255B816800091058 /* MixedSwiftUIUIKitExampleTests.swift */; };
 		3F52E449255B816800091058 /* MixedSwiftUIUIKitExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E448255B816800091058 /* MixedSwiftUIUIKitExampleUITests.swift */; };
 		3F52E45D255B823F00091058 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E45C255B823F00091058 /* main.swift */; };
+		3F52E465255B82CD00091058 /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E464255B82CD00091058 /* AppLauncher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		3F52E448255B816800091058 /* MixedSwiftUIUIKitExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixedSwiftUIUIKitExampleUITests.swift; sourceTree = "<group>"; };
 		3F52E44A255B816800091058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F52E45C255B823F00091058 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3F52E464255B82CD00091058 /* AppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLauncher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				3F52E426255B816600091058 /* AppDelegate.swift */,
+				3F52E464255B82CD00091058 /* AppLauncher.swift */,
 				3F52E45C255B823F00091058 /* main.swift */,
 				3F52E428255B816600091058 /* SceneDelegate.swift */,
 				3F52E42A255B816600091058 /* ContentView.swift */,
@@ -272,6 +275,7 @@
 				3F52E427255B816600091058 /* AppDelegate.swift in Sources */,
 				3F52E429255B816600091058 /* SceneDelegate.swift in Sources */,
 				3F52E45D255B823F00091058 /* main.swift in Sources */,
+				3F52E465255B82CD00091058 /* AppLauncher.swift in Sources */,
 				3F52E42B255B816600091058 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
