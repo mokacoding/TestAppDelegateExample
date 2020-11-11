@@ -1,10 +1,10 @@
 on: push
+env:
+  DEVELOPER_DIR: /Applications/Xcode_12.2.app/Contents/Developer
 
 jobs:
   uikit-only-tests:
     runs-on: macos-11.0
-    env:
-      DEVELOPER_DIR: /Applications/Xcode_12.2.app/Contents/Developer
     steps:
       - uses: actions/checkout@v2
       # I wanted to use xcbeautify to make the logs cleaner, but it fails to
@@ -28,4 +28,35 @@ jobs:
           xcodebuild test \
             -project TestAppDelegateExample.xcodeproj \
             -scheme TestAppDelegateExample \
+            -destination 'platform=iOS Simulator,name=iPhone 12 Pro' -sdk iphonesimulator # | xcbeautify
+
+  swiftui-only-tests:
+    runs-on: macos-11.0
+    steps:
+      - uses: actions/checkout@v2
+      # - run: |
+      #     brew tap thii/xcbeautify https://github.com/thii/xcbeautify.git
+      #     brew install xcbeautify
+      - name: SwiftUI Example Tests
+        run: |
+          cd SwiftUI-Example
+          xcodebuild test \
+            -project TestAppExample.xcodeproj \
+            -scheme TestAppExample \
+            -destination 'platform=iOS Simulator,name=iPhone 12 Pro' -sdk iphonesimulator # | xcbeautify
+
+
+  swiftui-wit-uikit-only-tests:
+    runs-on: macos-11.0
+    steps:
+      - uses: actions/checkout@v2
+      # - run: |
+      #     brew tap thii/xcbeautify https://github.com/thii/xcbeautify.git
+      #     brew install xcbeautify
+      - name: Mixed SwiftUI and UIKit Example Tests
+        run: |
+          cd Mixed-SwiftUI-UIKit-Example
+          xcodebuild test \
+            -project MixedSwiftUIUIKitExample.xcodeproj \
+            -scheme MixedSwiftUIUIKitExample \
             -destination 'platform=iOS Simulator,name=iPhone 12 Pro' -sdk iphonesimulator # | xcbeautify
