@@ -1,0 +1,8 @@
+on: push
+
+jobs:
+  macos-xcode:
+    runs-on: macos-latest
+    steps:
+      - name: "Print current version of Xcode"
+        run: xcodebuild -version
