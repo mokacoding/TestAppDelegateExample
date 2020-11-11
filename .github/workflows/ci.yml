@@ -22,7 +22,8 @@ jobs:
       # - run: |
       #     brew tap thii/xcbeautify https://github.com/thii/xcbeautify.git
       #     brew install xcbeautify
-      - run: |
+      - name: UIKit Example Tests
+        run: |
           cd UIKit-Example
           xcodebuild test \
             -project TestAppDelegateExample.xcodeproj \
