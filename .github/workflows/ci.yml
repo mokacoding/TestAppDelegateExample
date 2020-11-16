@@ -18,7 +18,7 @@ jobs:
           xcodebuild test \
             -project TestAppDelegateExample.xcodeproj \
             -scheme TestAppDelegateExample \
-            -destination 'platform=iOS Simulator,name=iPhone 12 Pro' -sdk iphonesimulator # | xcbeautify
+            -destination 'platform=iOS Simulator,name=iPhone 12 Pro' -sdk iphonesimulator | xcbeautify
 
   swiftui-only-tests:
     runs-on: macos-11.0
@@ -35,7 +35,7 @@ jobs:
           xcodebuild test \
             -project TestAppExample.xcodeproj \
             -scheme TestAppExample \
-            -destination 'platform=iOS Simulator,name=iPhone 12 Pro' -sdk iphonesimulator # | xcbeautify
+            -destination 'platform=iOS Simulator,name=iPhone 12 Pro' -sdk iphonesimulator | xcbeautify
 
 
   swiftui-wit-uikit-only-tests:
@@ -53,4 +53,4 @@ jobs:
           xcodebuild test \
             -project MixedSwiftUIUIKitExample.xcodeproj \
             -scheme MixedSwiftUIUIKitExample \
-            -destination 'platform=iOS Simulator,name=iPhone 12 Pro' -sdk iphonesimulator # | xcbeautify
+            -destination 'platform=iOS Simulator,name=iPhone 12 Pro' -sdk iphonesimulator | xcbeautify
